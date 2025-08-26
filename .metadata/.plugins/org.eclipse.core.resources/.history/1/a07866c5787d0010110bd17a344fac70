@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+div{
+	background-color: #eeeeee;
+	height: 80px;
+	padding: 20px;
+}

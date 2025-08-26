@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+div{
+	background-color: #e8f5e9;
+	height: 80px;
+	width:50%;
+	padding: 20px;
+	margin: 0;
+	text-align: center;
+	
+}

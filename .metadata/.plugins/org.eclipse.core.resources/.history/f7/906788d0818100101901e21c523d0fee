@@ -1,0 +1,58 @@
+<%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file = "connetion.jsp" %>
+ <%
+	String empno = request.getParameter("empno");
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	String sql = "select empno,ename,job,mgr,hiredate,sal,comm,deptno from emp where empno = ?";
+	
+	try{
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, Integer.parseInt(empno));
+		rs = pstmt.executeQuery();
+		
+		while(rs.next()){
+			String empno = rs.getString("empno")
+		}
+	}catch(Exception e){
+		out.println("오류");
+	}finally{
+		try{
+			pstmt.close();
+			rs.close();
+		}catch(Exception e){
+			out.println("오류");	
+		}
+	}
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<%@ include file="../html/header.jsp" %>
+<%@ include file="connetion.jsp" %>
+</head>
+<body>
+
+<!-- 주석 : frame start -->
+<div class="frame">
+	<div class="header">
+		<jsp:include page="../html/top.jsp"></jsp:include>
+	</div>
+	<div class="container">
+		<div class="nav">
+			<jsp:include page="../html/nav.jsp"></jsp:include>
+		</div>
+		<div class="content">
+			<h2>사원 상세 정보</h2>
+		</div>
+	</div>	
+	<div class="foot">
+		<jsp:include page="../html/foot.jsp"></jsp:include>
+	</div>
+</div>	
+<!-- frmae end -->
+</body>
+</html>

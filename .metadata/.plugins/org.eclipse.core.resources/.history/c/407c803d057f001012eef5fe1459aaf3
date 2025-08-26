@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<title>width()</title>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var a = $("div").width();
+		var b = $("div").height();
+		
+		$("div").click(function() {
+			$(this).addClass("box");
+			$(this).width(a-=10);
+			$(this).height(b-=10);
+			$(this).css("background-image", "url(../image/123.jpg)")
+			$(this).text("날...속인거니??")
+		});
+	});
+</script>
+<style type="text/css">
+	div{
+		width: 255px;
+		height: 255px;
+		float : left;
+		margin: 5px;
+		background: yellow;
+	}
+	.box{
+		background: red;
+		color : red;
+		font-size: 30px;
+		font-weight:bold;
+	}
+</style>
+</head>
+<body>
+	<div>박스1</div>
+	<div>박스2</div>
+	<div>박스3</div>
+	<div>박스4</div>
+	<div>박스5</div>
+
+</body>
+</html>

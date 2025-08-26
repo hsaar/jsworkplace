@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>login</title>
+<%@ include file = "./html/header.jsp" %>
+<!-- <jsp:include page="header.jsp"></jsp:include> -->
+
+</head>
+<body>
+<jsp:include page="../html/test05.jsp"></jsp:include>
+	<!-- flame start -->
+	<div class="frame">
+		<div class="header">
+			<jsp:include page="../html/top.jsp"></jsp:include>
+		</div>
+
+		<div class="container">
+			<div class="nav">
+				<jsp:include page="../html/nav.jsp"></jsp:include>
+			</div>
+			<div class="content">
+				<h1>로그인</h1>
+				
+			</div>
+		</div>
+
+		<div class="foot"> 
+			<jsp:include page="../html/foot.jsp"></jsp:include>
+		</div>
+
+	</div>
+	<!-- flame start -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file = "connetion.jsp" %>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String ename = request.getParameter("ename");
+	int sal = Integer.parseInt(request.getParameter("sal"));
+	
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	String sql = "update emp set ename = ?, sal = ? where empno = ?";
+	
+	pstmt = conn.prepareStatement(sql);
+	pstmt.setString(1, ename);
+			
+			
+	
+%>

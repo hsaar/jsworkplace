@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/style.css">
+<title>스타일 정복하기</title>
+<style>
+	p{
+		text-align: center;
+		text:16px;
+		background-color: red;
+		width: 80%;
+		height: 100px;
+		position: center center;
+	}
+	.test{
+		background-color: #f0f8ff;
+		width: 30%;
+		height:50px;
+	}
+	#test2{
+		background-color: #4CAF50;
+		width: 40%;
+		height: 60px;
+	}
+</style>
+</head>
+<body>
+	<h1>스타일 적용 방법 3가지</h1>
+	<p style = "background:yellow">방법 1 - 인라인방식</p>
+	
+	<hr><p>방법 2 - 내부방식</p>
+	
+	<hr><div>방법 3(div) - 외부방식</div>
+	
+	<hr>
+	<h1>선택자</h1>
+	<p>스타일의 방식 1 - 기본태그의 스타일</p>
+	<p class="test">스타일의 방식 2 - class 스타일</p>
+	<div class = "test">스타일의 방식 2 - class 스타일</div>
+	<p id = "test2">스타일의 방식 3 - id 스타일</p>
+</body>
+</html>

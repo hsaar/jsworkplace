@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file = "connetion.jsp" %>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+
+	String empno = request.getParameter("addEmpno"); 
+	String ename = request.getParameter("addEname"); 
+	String sal = request.getParameter("addSal"); 
+	
+	out.println(empno);
+	out.println(ename);
+	out.println(sal);
+	
+	String sql = "insert into emp(empno,ename,sal) values(?,?,?)";
+	
+%>

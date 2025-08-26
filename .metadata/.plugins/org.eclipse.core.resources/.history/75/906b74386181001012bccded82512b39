@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	
+	// 관리자 id : admin, pass : 1234
+	String id = request.getParameter("id");
+	String pass = request.getParameter("pass");
+	
+	if(id.equals("admin") && pass.equals("1234")){
+		out.println("로그인 성공 - 세션값 부여");
+		session.setAttribute("id", id);
+		session.setAttribute("nic", "관리자");
+		
+		
+	}else{
+		out.println("로그인 실패 - 되돌아가기");
+		
+		
+	}
+%>

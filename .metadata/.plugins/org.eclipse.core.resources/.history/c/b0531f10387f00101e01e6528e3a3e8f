@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<title>Insert title here</title>
+<style type="text/css">
+	li{
+		list-style-type: none;
+	}
+	#slideShow{
+		width: 300px;
+		height: 300px;
+		margin: auto 50px;
+		position: relative;
+		overflow: hidden;
+	}
+	.slides {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 2500px; /* 슬라이드할 사진과 마진 총 넓이 */
+	transition: down 0.5s ease-out;
+	/*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+	});
+</script>
+</head>
+<body>
+	<div id="slideShow">
+		<ul class="slides">
+			<li><img src="../image/ramjii.jpg"></li>
+			<li><img src="../image/ramjiii.jpg"></li>
+			<li><img src="../image/ramjiiii.jpg"></li>
+			<li><img src="../image/ramjiiiii.jpg"></li>
+			<li><img src="../image/ramjiiiiii.jpg"></li>
+			<li><img src="../image/ramjiiiiiii.jpg"></li>
+		</ul>
+		<p class="controller">
+			<span class="prev">&lang;</span> <span class="next">&rang;</span>
+		</p>
+	</div>
+</body>
+</html>

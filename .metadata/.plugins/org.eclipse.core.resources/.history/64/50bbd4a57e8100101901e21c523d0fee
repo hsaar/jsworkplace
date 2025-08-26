@@ -1,0 +1,46 @@
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.mysql.cj.xdevapi.PreparableStatement"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file = "connetion.jsp" %>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+
+	String ename = request.getParameter("addEname"); 
+	int empno = Integer.parseInt(request.getParameter("addEmpno"));
+	int sal = Integer.parseInt(request.getParameter("addSal"));
+	session.setAttribute("addEname", ename);
+	int i = 0;
+	
+	out.println(empno);
+	out.println(ename);
+	out.println(sal);
+	
+	PreparedStatement pstmt = null;
+	String sql = "insert into emp(empno,ename,sal) values(?,?,?)";
+	
+	try{
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, empno);
+		pstmt.setString(2, ename);
+		pstmt.setInt(3, sal);
+%>
+		<script>
+			alert("추가성공");
+			location.href("index.jsp");
+		</script>
+<%	
+		i = pstmt.executeUpdate();
+	}catch(Exception e){
+		out.println("오류");
+	}finally{
+		try{
+			if(pstmt != null) pstmt.close();
+		}catch(Exception e){
+			out.println("오류");
+		}
+	}
+
+%>

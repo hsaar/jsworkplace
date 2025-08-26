@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+	<%
+		String str = "hello world";
+	%>
+<!DOCTYPE html>
+<html>
+<title>test00</title>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	서버 첫 실행하기<br>
+	잘 동작되어야 합니다!!<br>
+	여기에 출력 : <%=str %><br>
+	<% out.println(str); %>
+</body>
+</html>

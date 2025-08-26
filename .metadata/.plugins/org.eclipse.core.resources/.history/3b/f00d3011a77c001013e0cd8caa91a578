@@ -1,0 +1,29 @@
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String str = "hello world";
+	String str2 = "<h1>서버 첫 실행하기</h1><br>"+
+			"<h2>잘 동작되어야 합니다!!</h2><br>"+
+			"여기에 출력 : ";	
+	// 차후에 자바클래스 및 서비스, DAO 호출함
+%>
+<!DOCTYPE html>
+<html>
+<title>test00</title>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>서버 첫 실행하기</h1><br>
+	<h2>잘 동작되어야 합니다!!</h2><br>
+	여기에 출력 : <%=str %><br>
+	<% out.println(str); %>
+	<hr>
+	<%="여기2차 출력 : "+str2 %>
+	
+	
+</body>
+</html>

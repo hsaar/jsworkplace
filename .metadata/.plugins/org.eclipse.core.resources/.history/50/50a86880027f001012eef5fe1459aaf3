@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<title>width()</title>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+	});
+</script>
+<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		float : left;
+		margin: 5px;
+		background: yellow;
+	}
+	.box{
+		background: red;
+	}
+</style>
+</head>
+<body>
+	<div>박스1</div>
+	<div>박스2</div>
+	<div>박스3</div>
+	<div>박스4</div>
+	<div>박스5</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<title>Jquery01</title>
+<style>
+	hr{
+		border: 0;
+		border-top: 2px solid;
+	}
+</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			console.log("ready?");
+			//location.href = "test02.jsp"; // 문서이동 명령어
+			$("button").click(function() {
+				$("div").hide(); // p.style.display = none;
+			})
+			
+			$("#hide").click(function(){
+				$(".a").hide(); 
+			});
+			
+			$("#return").click(function(){
+				$(".a").show();  
+			});
+			
+			$(".hid").click(function(){
+				$(".p1").hide(); 
+			});
+			
+			$(".sh").click(function(){
+				$(".p1").show(); 
+			});
+			
+			$("#msg").click(function() {
+				if($("#msg").show()){
+					$("#hs").hide();	
+				}else{
+					$("#hs").show();	
+				}
+			})
+			
+		});
+	</script>
+
+
+</head>
+<body>
+	<div class = "a">메시지 : 제이쿼리</div>
+	<button id = "hide">메시지 삭제</button>
+	<button id = "return">복구</button>
+	
+	<hr>
+	
+	<p class = "p1">메시지가 있습니다</p>
+	<button class = "hid">숨기기</button>
+	<button class = "sh">보이기</button>
+	
+	<hr>
+	
+	<h1>기본 예제</h1>
+	<div id="msg">충분한 학습을 하지않으면 모름</div>
+	<button id = "hs">show/hide</button>
+
+</body>
+</html>

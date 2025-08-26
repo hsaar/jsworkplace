@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class = "add">
+		<form action="empAdd_ok.jsp" method="post">
+			추가할 사원번호 : <input type="text" id = "addEmpno">
+			추가할 사원명 : <input type="text" id = "addEmpno">
+			추가할 사원급여 : <input type="text" id = "addEmpno">
+		
+		</form>
+	</div>
+</body>
+</html>

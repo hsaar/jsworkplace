@@ -1,0 +1,194 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이웃집 토토로</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple Gothic', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff; /* 연한 하늘색 배경 */
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #4CAF50; /* 토토로 색상 */
+            text-align: center;
+        }
+        .main-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .info-section {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .info-card {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+        }
+        .character-image {
+            display: block;
+            margin: 10px auto;
+            width: 150px;
+            border-radius: 50%;
+            border: 3px solid #66bb6a;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+        }
+        hr{
+        	width: 90%
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>이웃집 토토로 (My Neighbor Totoro)</h1>
+        
+        <img src="../image/ramjii.jpg" alt="이웃집 토토로 포스터" class="main-image">
+        <h2>토토로의 신상 GET 방식으로 전송</h2>
+		<form name = "test" action="test03.jsp" method="post">
+			<fieldset>
+			<legend>토토로 신상정보 입력</legend>
+			<p>
+				이름 : <input type = "text" name="name" placeholder = "토토로" size = "10" required>
+			</p>
+			<p>
+				나이 : <input type = "text" name="major" placeholder = "1302" size = "10" required>
+			</p>
+			<p>
+				토토로 패스워드 : <input type = "password" name="password" placeholder = "비밀번호" size = "10" required>
+			</p>
+			
+			</fieldset>
+			<fieldset>
+				<textarea rows="5" cols="50" name = "textarea" placeholder = "토토로에 대한 의견를 입력하세요."></textarea><br>
+			</fieldset>
+			<fieldset>
+			<h3>토토로의 성별은 무엇입니까?</h3>
+			<input type = "radio" name = "sex" value = "male" checked>남자
+			<input type = "radio" name = "sex" value = "female">여자
+			<h3>토토로의 학년은 무엇입니까?</h3>
+			<input type = "radio" name = "grade" value = "1" checked>1학년
+			<input type = "radio" name = "grade" value = "2" >2학년
+			<input type = "radio" name = "grade" value = "3" >3학년
+			<input type = "radio" name = "grade" value = "4" >4학년
+			<input type = "radio" name = "grade" value = "5" >5학년
+			</fieldset>
+			<fieldset>
+			<h3>토토로의 최애 간식은?</h3>
+			<input type = "checkbox" name="subject" value = "다람쥐" checked>다람쥐<br>
+			<input type = "checkbox" name="subject" value = "햄스터" >햄스터<br>
+			<input type = "checkbox" name="subject" value = "땃쥐" >땃쥐<br>
+			<input type = "checkbox" name="subject" value = "날다람쥐" >날다람쥐
+			</fieldset>
+			<fieldset>
+			<h3>관심 있는 주제는?</h3>
+			<select name="subjects">
+				<option value="1" selected>HTML5</option>
+				<option value="2" >CSS3</option>
+				<option value="3" >Java</option>
+				<option value="4" >Jquery</option>
+			</select>
+			</fieldset>
+			<fieldset>
+			<label>전공 분야 입력
+				<input type = "text" list = "majorlist" name="majorlist">
+				<datalist id="majorlist">
+					<option value = "software" size = "15">소프트웨어</option>
+					<option value = "Robot">로봇</option>
+					<option value = "System">시스템</option>
+					<option value = "Service">서비스</option>
+				</datalist>
+			</label>
+			</fieldset>
+			<fieldset>
+				Today : <input type = "date" name="today" min = "2020-01-01"><br>
+				나이 : <input type = "number" name = "number">
+				
+			</fieldset>
+			<fieldset>
+			작업현황 : <progress value = "5" max="10" title="진행률">20%</progress>
+			</fieldset>
+			<fieldset>
+			<input type = "submit" value = "전송">
+			<input type = "reset" value = "초기화">
+			</fieldset>
+		</form>
+        <h2>영화 소개</h2>
+        <p>
+            '이웃집 토토로'는 스튜디오 지브리가 제작하고 미야자키 하야오 감독이 연출한 1988년 일본의 애니메이션 영화입니다. 도시에서 시골로 이사 온 자매 사츠키와 메이가 숲의 수호자 '토토로'를 만나면서 벌어지는 신비롭고 따뜻한 이야기를 담고 있습니다. 
+            자연과 교감하고 순수한 동심을 그려내어 전 세계적으로 많은 사랑을 받는 작품입니다.
+        </p>
+		
+        <hr>
+
+        <h2>등장인물</h2>
+        <div class="info-section">
+            <div class="info-card">
+                <h3>토토로 (Totoro)</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Totoro_sitting.png" alt="토토로 이미지" class="character-image">
+                <p>
+                    숲에 사는 거대한 생물로, 몸이 크고 푹신푹신한 회색 털을 가졌습니다. 아이들에게만 보이는 신비로운 존재로, 소리를 내어 울거나 회오리 바람을 일으키는 등 여러 능력을 보여줍니다.
+                </p>
+            </div>
+            
+            <div class="info-card">
+                <h3>사츠키와 메이</h3>
+                <img src="https://i.pinimg.com/originals/93/29/97/9329971844b204e38e6dfd161a0f5e1f.png" alt="사츠키와 메이 이미지" class="character-image">
+                <p>
+                    <strong>사츠키:</strong> 11세 소녀로, 동생 메이를 잘 챙기는 의젓한 언니입니다.<br>
+                    <strong>메이:</strong> 4세의 어린 동생으로, 호기심이 많고 순수한 아이입니다. 토토로를 가장 먼저 만납니다.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>고양이 버스 (Catbus)</h3>
+                <img src="https://i.pinimg.com/736x/8d/d5/a2/8dd5a25e98f029a28581e29202159050.jpg" alt="고양이 버스 이미지" class="character-image">
+                <p>
+                    토토로의 친구이자 신비로운 이동수단입니다. 커다란 고양이 몸에 12개의 다리와 버스 형태의 속이 비어있는 독특한 외형을 가졌습니다.
+                </p>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <h2>명대사</h2>
+        <ul>
+            <li>"도토리... 도토리다!" - 메이</li>
+            <li>"토토로! 토토로!" - 메이</li>
+            <li>"울지마, 메이. 길은 반드시 열려있어." - 사츠키</li>
+        </ul>
+        
+        <p style="text-align: center; margin-top: 30px; color: #888;">&copy; 스튜디오 지브리. 모든 권리 보유.</p>
+
+    </div>
+
+</body>
+</html>

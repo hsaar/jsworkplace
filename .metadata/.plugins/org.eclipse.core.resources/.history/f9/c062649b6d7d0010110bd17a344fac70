@@ -1,0 +1,19 @@
+@charset "UTF-8";
+body {
+    background-color: #A4B497; /* 연두색 기본 색상 */
+    background-image: 
+        repeating-linear-gradient(
+            -45deg, 
+            rgba(255, 255, 255, 0.2), 
+            rgba(255, 255, 255, 0.2) 1px, 
+            transparent 1px, 
+            transparent 10px
+        ),
+        repeating-linear-gradient(
+            45deg, 
+            rgba(255, 255, 255, 0.2), 
+            rgba(255, 255, 255, 0.2) 1px, 
+            transparent 1px, 
+            transparent 10px
+        );
+}

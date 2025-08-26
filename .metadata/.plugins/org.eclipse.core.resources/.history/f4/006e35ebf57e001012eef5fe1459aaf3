@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<title>jquerytest02</title>
+<style type="text/css">
+	.main{
+		border: 1px solid #aaa;
+		
+	}
+	.check{
+		margin: 10px 10px;
+	}
+</style>
+	<script type="text/javascript">
+	$document.ready(function() {
+		$(".check").click(function() {
+			$(".collect").hide();
+		});
+		
+		var bt = false;
+		$(".check").click(function() {
+			if(!bt){
+				$(".collect").show();
+				bt = true;
+			}else{
+				$(".collect").hide();
+				bt = false;
+			}
+		});
+	})
+	
+		
+		
+	</script>
+</head>
+<body>
+<div class = "main">
+	<div>
+		<h2>질문1 : 대한민국의 수도는 어디입니까?</h2>
+		<span class = "check">[정답 보기]</span><br>
+		<span class = "collect">대한민국의 수도는 서울입니다.</span>
+	</div>
+	<div>
+		<h2>질문2 : 대한민국의 국보1호는 무엇입니까?</h2>
+		<span class = "check">[정답 보기]</span><br>
+		<span class = "collect">대한민국의 국보1호는 숭례문입니다.</span>
+	</div>
+</div>
+</body>
+</html>

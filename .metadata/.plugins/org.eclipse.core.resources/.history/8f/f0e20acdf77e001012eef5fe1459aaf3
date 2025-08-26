@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<title>jquerytest02</title>
+<style type="text/css">
+	.main{
+		border: 1px solid #aaa;
+		
+	}
+	.check{
+		margin: 10px 10px;
+	}
+</style>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		console.log("ready?");
+		$("ans").hide();
+		
+		$("ans.check1").click(function() {
+			this.hide();
+		});
+
+		var bt1 = false;
+		$("ans.check1").click(function() {
+			if(!bt1){
+				this.show();
+				bt1 = true;
+			}else{
+				$(".collect1").hide();
+				bt1 = false;
+			}
+		});
+		
+		var bt2 = false;
+		$(".check2").click(function() {
+			if(!bt2){
+				$(".collect2").show();
+				bt2 = true;
+			}else{
+				$(".collect2").hide();
+				bt2 = false;
+			}
+		});
+	})
+		
+	</script>
+</head>
+<body>
+<div class = "main">
+	<div>
+		<h2>질문1 : 대한민국의 수도는 어디입니까?</h2>
+		<p class = "check1">[정답 보기]</p><br>
+		<ans class = "check1">대한민국의 수도는 서울입니다.</ans>
+	</div>
+	<div>
+		<h2>질문2 : 대한민국의 국보1호는 무엇입니까?</h2>
+		<p class = "check2">[정답 보기]</p><br>
+		<ans class = "collect2">대한민국의 국보1호는 숭례문입니다.</ans>
+	</div>
+</div>
+</body>
+</html>

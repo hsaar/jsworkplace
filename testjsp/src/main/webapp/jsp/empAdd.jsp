@@ -1,0 +1,39 @@
+<%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<%@ include file="../html/header.jsp" %>
+<%@ include file="connetion.jsp" %>
+</head>
+<body>
+
+<!-- 주석 : frame start -->
+<div class="frame">
+	<div class="header">
+		<jsp:include page="../html/top.jsp"></jsp:include>
+	</div>
+	<div class="container">
+		<div class="nav">
+			<jsp:include page="../html/nav.jsp"></jsp:include>
+		</div>
+		<div class="content">
+			<div class = "add">
+				<h2>사원추가</h2>
+				<form action="empAdd_ok.jsp" method="post">
+					추가할 사원번호 : <input type="text" name = "addEmpno"><br>
+					추가할 사원명 : <input type="text" name = "addEname"><br>
+					추가할 사원급여 : <input type="text" name = "addSal"><br>
+					<input type="submit" value = "추가">
+				</form>
+			</div>
+		</div>
+	</div>	
+	<div class="foot">
+		<jsp:include page="../html/foot.jsp"></jsp:include>
+	</div>
+</div>	
+<!-- frmae end -->
+</body>
+</html>

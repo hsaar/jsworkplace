@@ -1,0 +1,7 @@
+@charset "UTF-8";
+body {
+    background-image: url('../image/green2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

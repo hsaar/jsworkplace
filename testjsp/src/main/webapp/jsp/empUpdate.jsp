@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <%@ include file="../html/header.jsp" %>
 <%@ include file="connetion.jsp" %>
 <%
@@ -31,8 +32,14 @@
 				<p>수정전 사원명 : <%out.print(ename); %></p>
 				<p>수정전 쌀 : <%out.print(sal); %></p>
 				<input type="hidden" name = "empno" value = <%=empno%>>
-				수정할 사원명 : <input type="text" name="ename"><br>
-				수정할 쌀 : <input type="text" name="sal"><br>
+				
+				수정할 사원명 : <input type="text" name="ename" placeholder = <%=ename%> required><br>
+				수정할 직함 : <input type="text" name="job" required><br>
+				수정할 MGR : <input type="text" name="mgr" required><br>
+				수정할 입사일 : <input type="date" name="hiredate" required><br>
+				수정할 쌀 : <input type="text" name="sal" placeholder = <%=sal%> required><br>
+				수정할 커미션 : <input type="text" name="comm" required><br>
+				수정할 부서번호 : <input type="text" name="deptno" required><br>
 				<input type="submit" value="전송">
 			</form>
 		</div>

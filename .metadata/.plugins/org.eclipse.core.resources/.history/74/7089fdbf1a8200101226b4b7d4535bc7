@@ -1,0 +1,72 @@
+<%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<%@ include file="../html/header.jsp" %>
+<%@ include file="connetion.jsp" %>
+</head>
+<body>
+
+<!-- 주석 : frame start -->
+<div class="frame">
+	<div class="header">
+		<jsp:include page="../html/top.jsp"></jsp:include>
+	</div>
+	<div class="container">
+		<div class="nav">
+			<jsp:include page="../html/nav.jsp"></jsp:include>
+		</div>
+		<div class="content">
+			<h1>사원 목록</h1>
+			<table border="1" width="500">
+				<tr>
+					<th>사원번호</th>
+					<th>사원명</th>
+					<th>사원급여</th>
+					<th>조회</th>
+					<th>수정</th>
+				</tr>
+<%
+	try{
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select empno, ename, sal from emp order by empno";
+		
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		
+		while(rs.next()){
+			String empno = rs.getString("empno");
+			String ename = rs.getString("ename");
+			String sal = rs.getString("sal");
+			%>
+				<tr>
+					<td><%=empno %></td>
+					<td><%=ename %></td>
+					<td><%=sal %></td>				
+					<td><a href="empDetail.jsp?empno=<%=empno%>">조회</a></td>				
+					<td><a href="empUpdate.jsp?empno=<%=empno%>&ename=<%=ename%>&sal=<%=sal%>">수정</a></td>
+				</tr>
+			
+			<%
+		}
+				
+	}catch(Exception e){
+		out.println("오류");
+	}
+
+%>
+				
+			</table>
+		</div>
+	</div>	
+	<div class="foot">
+		<jsp:include page="../html/foot.jsp"></jsp:include>
+	</div>
+</div>	
+<!-- frmae end -->
+</body>
+</html>

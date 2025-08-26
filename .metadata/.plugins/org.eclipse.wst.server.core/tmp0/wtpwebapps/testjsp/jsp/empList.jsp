@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <%@ include file="../html/header.jsp" %>
 <%@ include file="connetion.jsp" %>
 </head>
@@ -20,7 +21,7 @@
 		</div>
 		<div class="content">
 			<h1>사원 목록</h1>
-			<table border="1" width="500">
+			<table class = "table table-border">
 				<tr>
 					<th>사원번호</th>
 					<th>사원명</th>

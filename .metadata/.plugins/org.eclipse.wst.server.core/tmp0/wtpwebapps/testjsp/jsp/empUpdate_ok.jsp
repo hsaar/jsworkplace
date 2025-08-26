@@ -7,17 +7,28 @@
 	request.setCharacterEncoding("UTF-8");
 	int empno = Integer.parseInt(request.getParameter("empno"));
 	String ename = request.getParameter("ename");
-	int sal = Integer.parseInt(request.getParameter("sal"));
+	String job = request.getParameter("job");
+	int mgr = Integer.parseInt(request.getParameter("mgr"));
+	String hiredate = request.getParameter("hiredate");
+	double sal = Integer.parseInt(request.getParameter("sal"));
+	double comm = Integer.parseInt(request.getParameter("comm"));
+	int deptno = Integer.parseInt(request.getParameter("deptno"));
+	
 	int i = 0;
 	
 	PreparedStatement pstmt = null;
-	String sql = "update emp set ename = ?, sal = ? where empno = ?";
+	String sql = "update emp set ename = ?, job = ?, mgr = ?, hiredate = ?, sal = ?, comm = ?, deptno = ? where empno = ?";
 	
 	try{
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, ename);
-		pstmt.setInt(2, sal);
-		pstmt.setInt(3, empno);
+		pstmt.setString(2, job);
+		pstmt.setInt(3, mgr);
+		pstmt.setString(4, hiredate);
+		pstmt.setDouble(5, sal);
+		pstmt.setDouble(6, comm);
+		pstmt.setInt(7, deptno);
+		pstmt.setInt(8, empno);
 		
 		i = pstmt.executeUpdate();
 		

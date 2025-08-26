@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<meta charset="UTF-8">
+	
 
+	
 <style type="text/css">
 	body{
 		font:14px/1.8 Arial, Helvetica, sans-serif;
@@ -53,10 +54,12 @@
 	}
 	.nav{
 		float: left;
+		margin-right:0px;
+		gap:100px;
 		width: 150px;
 		background: #333;
 		color: #fff;
-		margin-right: 0px;
+		
 	}
 	.nav-list{
 		list-style: none;
@@ -76,9 +79,10 @@
 		background: #5457de;
 	}
 	.content{
-		float: left;
+		float:left;
+		margin-left:20px;
 		width: 600px;
-		margin-left: 10px;
+		
 	}
 	.foot{
 		margin-top : 30px;
@@ -102,6 +106,26 @@
 	}
 	
 </style>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+
+
+
+
+
+
+
 <script type="text/javascript">
 	//var em = test01();
 	

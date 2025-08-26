@@ -9,9 +9,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>login</title>
 <%@ include file = "../html/header.jsp" %>
-
 </head>
 <body>
 	<!-- flame start -->

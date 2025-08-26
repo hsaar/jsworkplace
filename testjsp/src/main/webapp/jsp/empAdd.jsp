@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <%@ include file="../html/header.jsp" %>
 <%@ include file="connetion.jsp" %>
 </head>

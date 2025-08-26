@@ -1,0 +1,64 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file = "connetion.jsp" %>
+<%
+	request.setCharacterEncoding("UTF-8");
+	int empno = Integer.parseInt(request.getParameter("empno"));
+	String ename = request.getParameter("ename");
+	String job = request.getParameter("job");
+	int mgr = Integer.parseInt(request.getParameter("mgr"));
+	int hiredate = Integer.parseInt(request.getParameter("hiredate"));
+	double sal = Integer.parseInt(request.getParameter("sal"));
+	double comm = Integer.parseInt(request.getParameter("comm"));
+	int deptno = Integer.parseInt(request.getParameter("deptno"));
+	
+	int i = 0;
+	
+	PreparedStatement pstmt = null;
+	String sql = "update emp set ename = ?, job = ?, mgr = ?, hiredate = ?, sal = ?, comm = ?, deptno = ? where empno = ?";
+	
+	try{
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, ename);
+		pstmt.setString(2, job);
+		pstmt.setInt(3, mgr);
+		pstmt.setInt(4, hiredate);
+		pstmt.setDouble(5, sal);
+		pstmt.setDouble(6, comm);
+		pstmt.setInt(7, deptno);
+		pstmt.setInt(8, empno);
+		
+		i = pstmt.executeUpdate();
+		
+		if(i>0){
+		%>
+			<script>
+				alert("수정 성공");
+				location.href = "empList.jsp";
+			</script>
+		<%
+		}else{
+		%>
+			<script>
+				alert("수정 실패");
+				location.href = "empList.jsp";
+			</script>
+		<%	
+			
+		}
+	}catch(Exception e){
+		out.println("error");
+	}finally{
+		try{
+			pstmt.close();
+		}catch(Exception e){
+			out.println("error");
+		}
+	}
+	
+			
+	
+	
+%>

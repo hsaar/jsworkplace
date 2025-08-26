@@ -26,13 +26,25 @@
 		pstmt.setInt(1, empno);
 		pstmt.setString(2, ename);
 		pstmt.setInt(3, sal);
+
+		i = pstmt.executeUpdate();
+
+	if(i>0){
 %>
 		<script>
 			alert("추가성공");
 			location.href="empList.jsp";
 		</script>
-<%	
-		i = pstmt.executeUpdate();
+<%			
+	}else{
+%>
+		<script>
+			alert("추가실패");
+			location.href="empList.jsp";
+		</script>
+<%
+	}
+
 	}catch(Exception e){
 		out.println("오류");
 	}finally{
